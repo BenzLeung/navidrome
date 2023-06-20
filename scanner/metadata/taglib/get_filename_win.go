@@ -27,7 +27,7 @@ import (
 	"unicode/utf8"
 )
 
-var SIZEOF_WCHAR_T C.size_t = C.size_t(C.SIZEOF_WCHAR_T)
+var SIZEOF_WCHAR_T C.size_t = C.SIZEOF_WCHAR_T
 
 func getFilename(s string) *C.wchar_t {
 	wstr, _ := StringToWcharT(s)
@@ -43,7 +43,7 @@ func StringToWcharT(s string) (*C.wchar_t, C.size_t) {
 	default:
 		panic(fmt.Sprintf("Invalid sizeof(wchar_t) = %v", SIZEOF_WCHAR_T))
 	}
-	panic("?!!")
+	// panic("?!!")
 }
 
 // Windows
